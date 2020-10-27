@@ -1,1 +1,1 @@
-# React_2020
+# ES6 Cheatsheet
