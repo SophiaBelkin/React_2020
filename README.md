@@ -72,6 +72,13 @@ const address = {
 const clone = {...address};
 ```
 
+### Other Object functions
+```
+Object.entires();
+Object.keys();
+Object.values();
+```
+
 ### Classes 
 The updates to classes in ES6 do not introduce a new OO inheritance model. The classes are “syntactical sugar” to support prototype inheritance. 
 
@@ -136,3 +143,21 @@ import Teacher from './teacher' // {} for named exports
 
 
 ### Promise, Async, Await 
+The Async function allows us to define an asynchronous function and return a Promise.
+
+```function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+}
+
+asyncCall();
+```
