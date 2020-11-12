@@ -99,3 +99,40 @@ class Teacher extends Person {
 
 const teacher = new Teacher("Joe", "Msc");
 ```
+
+
+### Modules
+Objects defined in a module are private by defaule. The class above is not visiable to other files or modules.
+To make the class accessable by other classes, export the class to make it public and import it when we need it 
+
+```
+import { Person } from './person' // No extention needed
+export class Teacher extends Person {
+    constructor(name, degree) {
+      super(name)
+      this.degree = degree;
+    ]
+
+    teach() {
+      console.log("teach");
+    }
+}
+```
+
+```
+import { Teacher } from './teacher'
+
+const teacher = new Teacher("Joe", "Msc");
+teacher.teach();
+teacher.walk();
+```
+
+### Default export 
+```
+export default class Teacher extends Person {}
+
+import Teacher from './teacher' // {} for named exports
+```
+
+
+### Promise, Async, Await 
